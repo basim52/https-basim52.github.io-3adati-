@@ -1,0 +1,61 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap');
+
+@theme {
+  --font-headline: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-label: "Plus Jakarta Sans", sans-serif;
+
+  --color-surface: #0c0c1f;
+  --color-surface-dim: #0c0c1f;
+  --color-surface-container-low: #111127;
+  --color-surface-container: #17172f;
+  --color-surface-container-high: #1d1d37;
+  --color-surface-container-highest: #23233f;
+  --color-on-surface: #e5e3ff;
+  --color-on-surface-variant: #aaa8c3;
+  
+  --color-primary: #df8eff;
+  --color-primary-container: #d67afc;
+  --color-on-primary: #4f006d;
+  
+  --color-secondary: #2efd7c;
+  --color-secondary-container: #006d2f;
+  --color-on-secondary: #005b26;
+
+  --color-tertiary: #72dcff;
+  
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-body;
+  }
+}
+
+.glass-card {
+  background: rgba(35, 35, 63, 0.4);
+  backdrop-filter: blur(20px);
+  border-top: 1px solid rgba(229, 227, 255, 0.1);
+  border-left: 1px solid rgba(229, 227, 255, 0.1);
+}
+
+.neon-glow-primary {
+  box-shadow: 0 0 40px 0 rgba(223, 142, 255, 0.15);
+}
+
+.neon-glow-secondary {
+  box-shadow: 0 0 20px 0 rgba(46, 253, 124, 0.2);
+}
+
+/* Hide scrollbar for heatmap */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
